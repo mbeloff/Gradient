@@ -8,9 +8,13 @@ body {
   height: 100%;
 }
 
-nav {
+.navbar {
+  width: 100%;
   height: 50px;
   background: #6b5380;
+  position: fixed;
+  top: 0;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.05);
 }
 
 .nav-container {
@@ -24,14 +28,31 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  
 }
 
 .nav-menu a {
+  padding: 10px 10px;
+  border: 1px rgb(140, 122, 173);
+  border-style: solid;
+  border-radius: 2px;
   text-decoration: none;
   color: white;
+  transition: background 250ms ease-in-out, 
+  transform 150ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.nav-menu a:hover {
+  background: #604b74;
+  transform: scale(1.05);
+  border: 1px rgb(108, 92, 119);
+  border-style: solid;
+  border-radius: 2px;
 }
 
 #section-1 {
+  margin-top: 50px;
   height: 700px;
   background: rgb(148, 133, 165);
 }
@@ -42,6 +63,7 @@ nav {
   align-items: center;
   justify-content: center;
   display: flex;
+  color: rgb(40, 39, 43);
 }
 
 #section-1 .header-container {
@@ -75,6 +97,8 @@ nav {
 }
 
 .card {
+  border: solid white 10px;
+  border-radius: 5px;
   text-align: center;
   background: white;
   margin: auto;
@@ -135,10 +159,12 @@ nav {
 .card-text p {
   width: 100%;
   text-align: left;
-  padding: 0px 10px 0 10px;
+  padding: 0px 10px 0px 10px;
   margin: 0px;
   align-self: stretch;
   height: 100px;
+  max-height: 95px;
+  overflow: hidden;
 }
 
 
@@ -156,14 +182,13 @@ button {
   border: none;
   border-radius: 2px;
   padding: 1em;
-  margin: 0 0 10px 0;
+  margin: 5px 0 10px 0;
   text-decoration: none;
   background: #c2acd6;
   color: #ffffff;
   font-family: sans-serif;
   font-size: 1rem;
   cursor: pointer;
-  /* text-align: center; */
   transition: background 250ms ease-in-out, 
               transform 150ms ease;
   -webkit-appearance: none;
@@ -192,4 +217,18 @@ button:active {
   background-image:url(/img/header2.jpg);
   background-position:center;
   background-size: cover;
+}
+
+footer {
+  padding: 10px 0px 10px 0;
+  text-align: center
+}
+
+footer p {
+  margin: 10px 0 0 0;
+  font-size: .75em;
+}
+
+i {
+  color: #78618f
 }

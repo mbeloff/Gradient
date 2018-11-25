@@ -1,3 +1,9 @@
+:root{
+  --primary: #6b5380;
+  --primary-dark: #604b74;
+  --primary-light: #8c7aad;
+}
+
 html {
   height: 100%;
 }
@@ -6,12 +12,13 @@ body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
   height: 100%;
+  color: #28272b;
 }
 
 .navbar {
   width: 100%;
   height: 50px;
-  background: #6b5380;
+  background: var(--primary);
   position: fixed;
   top: 0;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.05);
@@ -33,7 +40,7 @@ body {
 
 .nav-menu a {
   padding: 10px 10px;
-  border: 1px rgb(140, 122, 173);
+  border: 1px var(--primary-light);
   border-style: solid;
   border-radius: 2px;
   text-decoration: none;
@@ -44,17 +51,16 @@ body {
   -moz-appearance: none;
 }
 .nav-menu a:hover {
-  background: #604b74;
+  background: var(--primary-dark);
   transform: scale(1.05);
-  border: 1px rgb(108, 92, 119);
+  border: 1px var(--primary-light);
   border-style: solid;
   border-radius: 2px;
 }
 
-#section-1 {
+#header-1 {
   margin-top: 50px;
   height: 700px;
-  background: rgb(148, 133, 165);
 }
 
 .header-container {
@@ -63,17 +69,16 @@ body {
   align-items: center;
   justify-content: center;
   display: flex;
-  color: rgb(40, 39, 43);
 }
 
-#section-1 .header-container {
+#header-1 .header-container {
   background-image:url(/img/header.jpg);
   background-position:center;
   background-size: cover;
 }
 
-#section-2 {   
-  background: #ffffff;
+#section {  
+  background: white;
   padding-top: 50px;
   padding-bottom: 50px;
 }
@@ -85,6 +90,7 @@ body {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  align-items: flex-start;
 }
 
 .card-container {
@@ -103,7 +109,6 @@ body {
   background: white;
   margin: auto;
   width: 350px;
-  height: 400px;
   -webkit-box-shadow: 3px 2px 38px -3px rgba(0,0,0,0.06);
   -moz-box-shadow: 3px 2px 38px -3px rgba(0,0,0,0.06);
   box-shadow: 3px 2px 38px -3px rgba(0,0,0,0.06);
@@ -112,8 +117,22 @@ body {
 .card-wide {
   text-align: center;
   background: white;
-  width: 550px;
-  height: 500px;
+  border: solid white 10px;
+  border-radius: 5px;
+  width: 500px;
+  -webkit-box-shadow: 3px 2px 38px -3px rgba(0,0,0,0.06);
+  -moz-box-shadow: 3px 2px 38px -3px rgba(0,0,0,0.06);
+  box-shadow: 3px 2px 38px -3px rgba(0,0,0,0.06);
+}
+
+.card-full {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background: white;
+  border: solid white 10px;
+  border-radius: 5px;
+  width: 100%;
   -webkit-box-shadow: 3px 2px 38px -3px rgba(0,0,0,0.06);
   -moz-box-shadow: 3px 2px 38px -3px rgba(0,0,0,0.06);
   box-shadow: 3px 2px 38px -3px rgba(0,0,0,0.06);
@@ -122,13 +141,17 @@ body {
 .card-image {
   background: grey;
   width: 100%;
-  height: 50%;
+  height: 150px;
   background-position: center;
   background-size: cover;
 }
 
 .card-wide .card-image {
-  height: 60%;
+  height: 250px;
+}
+
+.card-full .card-image {
+  height: 400px;
 }
 
 .img-1 {
@@ -142,8 +165,12 @@ body {
 }
 .img-4 {
   background-image: url(/img/scape4.jpg);
-}.img-5 {
+}
+.img-5 {
   background-image: url(/img/scape5.jpg);
+}
+.img-6 {
+  background-image: url(/img/scape6.jpg);
 }
 
 .card-text h2 {
@@ -162,29 +189,18 @@ body {
   padding: 0px 10px 0px 10px;
   margin: 0px;
   align-self: stretch;
-  height: 100px;
-  max-height: 95px;
+  /* max-height: 95px; */
   overflow: hidden;
 }
 
-
-
-.card-text {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-end;
-}
-
-button {
+.card-container button {
   align-self: center;
   border: none;
   border-radius: 2px;
   padding: 1em;
-  margin: 5px 0 10px 0;
+  margin-top: 10px;
   text-decoration: none;
-  background: #c2acd6;
+  background: var(--primary);
   color: #ffffff;
   font-family: sans-serif;
   font-size: 1rem;
@@ -197,7 +213,7 @@ button {
 
 button:hover,
 button:focus {
-  background: #78618f;
+  background: var(--primary-dark);
 }
 
 button:focus {
@@ -208,12 +224,11 @@ button:active {
   transform: scale(1.1);
 }
 
-#section-3 {
+#header-2 {
   height: 400px;
-  background: rgb(148, 133, 165);
 }
 
-#section-3 .header-container {
+#header-2 .header-container {
   background-image:url(/img/header2.jpg);
   background-position:center;
   background-size: cover;
@@ -230,5 +245,5 @@ footer p {
 }
 
 i {
-  color: #78618f
+  color: var(--primary-dark)
 }

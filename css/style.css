@@ -60,7 +60,7 @@ body {
 
 #header-1 {
   margin-top: 50px;
-  height: 650px;
+  height: 585px;
 }
 
 #header-2 {
@@ -240,7 +240,25 @@ footer p {
     width: 100%;
   }
   
-  .card {
+  .card-small {
+    width: 75%;
+    margin: auto;
+  }
+  
+  .card-wide, .card-full {
+    width: 100%;
+  }  
+}
+
+@media screen and (max-width: 374px) { 
+  .card-small {
     width: 100%;
   }
+
+  .nav-container {
+    width: 95%;
+  }
+
+  .nav-menu a {
+    padding: 10px 5px;
 }

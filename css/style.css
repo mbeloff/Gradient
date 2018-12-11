@@ -62,7 +62,7 @@ body {
 
 #header-1 {
   margin-top: 50px;
-  height: 585px;
+  height: 50vh;
 }
 
 #header-2 {
@@ -75,18 +75,16 @@ body {
   align-items: center;
   justify-content: center;
   display: flex;
-  background-size: cover;
-  background-attachment: fixed;
 }
 
 #header-1 .header-container {
   background-image: url(/img/header.jpg);
-  background-position: calc(50%) calc(50% - 150px);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 #header-2 .header-container {
   background-image: url(/img/header2.jpg);
-  background-position: calc(50%) calc(50%);
 }
 
 #section {

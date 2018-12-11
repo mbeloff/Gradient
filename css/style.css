@@ -91,6 +91,21 @@ body {
   background: white;
 }
 
+.article {
+  max-width: 1220px;
+  margin: 40px;
+}
+
+.article:first-child:first-letter {
+  float: left;
+  font-family: Georgia;
+  font-size: 5em;
+  line-height: 45px;
+  padding-top: 4px;
+  padding-right: 8px;
+  padding-left: 3px;
+}
+
 .section-container {
   margin: auto;
   width: 98%;
